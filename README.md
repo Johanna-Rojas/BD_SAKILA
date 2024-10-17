@@ -1,10 +1,10 @@
-## :point_right: Introducción
+## :round_pushpin: Objetivo general
 
 El **objetivo** del proyecto es realizar un análisis exploratorio de la base de datos Sakila mediante consultas básicas y avanzadas en MySQL.
 
-***Sakila es una base de datos relacional preinstalada en MySQL, que simula una empresa de alquiler de películas.***
+***Sakila es una base de datos relacional preinstalada en MySQL (Sofware de código abierto desarrollado por Oracle), que simula una empresa de alquiler de películas.***
 
-## :wrench: Tecnologías utilizadas
+## :gear: Herramientas utilizadas
 
 Las consultas se realizarón mediante las siguientes herramientas:
 
@@ -15,7 +15,7 @@ Las consultas se realizarón mediante las siguientes herramientas:
 
 El siguiente diagrama entidad - relación (DER) nos permite saber como estan estructurados los datos de la empresa Sakila y como se relacionan entre sí: 
 
-![DER]()
+![DER](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/SAKILA_ER_Diagram.png)
 
 MySQL Workbench posibilita la visualización y diseño de los diagramas ER. 
 Para la base de datos Sakila y en general, el diagrama se descarga de la siguiente manera:
@@ -50,7 +50,7 @@ El análisis de la base de datos de la empresa Sakila se dividio en 3 secciones:
 - Reconocer las películas de menor rotación.
 - Identificar las películas con poca existencia.
 
-## :bookmark_tabs: Consultas SQLite
+## :bookmark_tabs: Consultas en MySQL
 
 A continuación se presentan algunas de las consultas realizadas, si deseas visualizar el ***Script completo***, ir al siguiente enlace: [Consultas DB Sakila con MySQL]()
 
