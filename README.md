@@ -2,7 +2,7 @@
 
 El **objetivo** del proyecto es realizar un análisis exploratorio de la base de datos **Sakila** mediante consultas básicas y avanzadas en MySQL.
 
-***Sakila es una base de datos relacional preinstalada en MySQL (Sofware de código abierto desarrollado por Oracle), que simula una empresa de alquiler de películas.***
+***Sakila es una base de datos relacional preinstalada en MySQL (Software de código abierto desarrollado por Oracle), que simula una empresa de alquiler de películas.***
 
 ## :gear: Herramientas utilizadas
 
@@ -13,11 +13,11 @@ Las consultas se realizarón mediante:
 
 ## :open_file_folder: Estructura de la base de datos
 
-El siguiente diagrama entidad - relación (DER) nos permite identificar como estan estructurados los datos de la empresa **Sakila** y como se relacionan entre sí: 
+El siguiente diagrama entidad - relación (DER) nos permite identificar como estan estructurados los datos de la empresa y como se relacionan entre sí: 
 
 ![DER](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/SAKILA_ER_Diagram.png)
 
-*MySQL Workbench posibilita la visualización y diseño de los diagramas ER y se puede descargar de la siguiente manera:*
+*MySQL Workbench posibilita la visualización y diseño de los diagramas ER, que se pueden descargar de la siguiente manera:*
 
 1. Crear la conexión con la base de datos.
 2. En la barra de menú ir a "Database" y seleccionar la opción "Reverse Engineer".
@@ -30,7 +30,7 @@ El siguiente diagrama entidad - relación (DER) nos permite identificar como est
 
 ## :mag: Objetivos de análisis
 
-El análisis de la base de datos de la empresa Sakila se dividio en 3 secciones:
+El análisis de la base de datos se dividio en 3 secciones:
 
 **1. Análisis de Películas y clientes:**
 
@@ -47,7 +47,7 @@ El análisis de la base de datos de la empresa Sakila se dividio en 3 secciones:
 **3. Análisis de inventario:**
 
 - Reconocer las películas de menor rotación.
-- Identificar las películas con poca existencia.
+- Identificar las películas con menor Stock.
 
 ## :bookmark_tabs: Consultas en MySQL
 
