@@ -13,21 +13,20 @@ Las consultas se realizarón mediante:
 
 ## :open_file_folder: Estructura de la base de datos
 
-El siguiente diagrama entidad - relación (DER) nos permite identificar como estan estructurados los datos de la empresa Sakila y como se relacionan entre sí: 
+El siguiente diagrama entidad - relación (DER) nos permite identificar como estan estructurados los datos de la empresa **Sakila** y como se relacionan entre sí: 
 
 ![DER](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/SAKILA_ER_Diagram.png)
 
-*MySQL Workbench posibilita la visualización y diseño de los diagramas ER.* 
-*Para la base de datos Sakila y en general, el diagrama se puede descargar de la siguiente manera:*
+*MySQL Workbench posibilita la visualización y diseño de los diagramas ER y se puede descargar de la siguiente manera:*
 
-*1. Crear la conexión con la base de datos.*
-*2. En la barra de menú ir a "Database" y seleccionar la opción "Reverse Engineer".*
-*3. Incluir los objetos deseados y configurar las opciones adicionales.*
-*4. Inicia el proceso de generación del diagrama y se abre en una pestaña.*
-*5. Señalar en la barra de menú "File" -> opción "Save Model As" o "Export".*
-*6. Guardar en formato .mwb o escoger el formato a exportar(en este caso PNG).*
+1. Crear la conexión con la base de datos.
+2. En la barra de menú ir a "Database" y seleccionar la opción "Reverse Engineer".
+3. Incluir los objetos deseados y configurar las opciones adicionales.
+4. Inicia el proceso de generación del diagrama y se abre en una pestaña.
+5. Señalar en la barra de menú "File" -> opción "Save Model As" o "Export".
+6. Guardar en formato .mwb o escoger el formato a exportar(en este caso PNG).
 
-**Importante: El proceso de reconocimiento y comprensión de la esctructura interna de una base de datos es fundamental para la manipulación de la misma.**
+:warning: **Importante: El proceso de reconocimiento y comprensión de la estructura interna de una base de datos es fundamental para la manipulación de la misma.**
 
 ## :mag: Objetivos de análisis
 
