@@ -17,7 +17,7 @@ El siguiente diagrama entidad - relación (DER) nos permite identificar como est
 
 ![DER](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/SAKILA_ER_Diagram.png)
 
-*MySQL Workbench posibilita la visualización y diseño de los diagramas ER, que se pueden descargar de la siguiente manera:*
+*MySQL Workbench posibilita la visualización y diseño de los diagramas ER, que se puede descargar de la siguiente manera:*
 
 1. Crear la conexión con la base de datos.
 2. En la barra de menú ir a "Database" y seleccionar la opción "Reverse Engineer".
@@ -28,30 +28,29 @@ El siguiente diagrama entidad - relación (DER) nos permite identificar como est
 
 :warning: **Importante: El proceso de reconocimiento y comprensión de la estructura interna de una base de datos es fundamental para la manipulación de la misma.**
 
+Para una descripción detallada de la base de datos ir a la documentación oficial de MySQL: [Sakila Sample Database](https://dev.mysql.com/doc/sakila/en/)
+
 ## :mag: Objetivos de análisis
 
-El análisis de la base de datos se dividio en 3 secciones:
+El análisis de la base de datos se dividio en 2 secciones:
 
-**1. Análisis de Películas y clientes:**
+**1. Análisis de alquiler y clientes:**
 
 - Identificar las películas más rentables.
 - Determinar los generos de películas más populares.
-- Relacionar el genero y calificación.
-
-**2. Análisis de alquiler y venta:**
-
+- Clasificar los actores estrella de las peliculas más rentables.
 - Identificar las horas y días pico de alquiler.
-- Analizar la tendencia de alquiler, ventas e ingresos a lo largo del tiempo.
+- Analizar la tendencia de alquiler e ingresos a lo largo del tiempo.
 - Clasificar los mejores clientes.
 
-**3. Análisis de inventario:**
+**2. Análisis de inventario:**
 
 - Reconocer las películas de menor rotación.
 - Identificar las películas con menor Stock.
 
 ## :bookmark_tabs: Consultas en MySQL
 
-A continuación se presentan algunas de las consultas realizadas, si deseas visualizar el ***Script completo***, ir al siguiente enlace: [Consultas DB Sakila con MySQL]()
+A continuación se presentan algunas de las consultas realizadas, si deseas visualizar el ***Script completo***, ir al siguiente enlace: [Queries DB Sakila / MySQL]()
 
 ~~~
 ----------------------------------------------------------------------------------------------------
