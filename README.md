@@ -54,14 +54,100 @@ A continuación se presentan algunas de las consultas realizadas, si deseas visu
 
 ~~~
 ----------------------------------------------------------------------------------------------------
--- 
+-- ANÁLISIS DE ALQUILER Y CLIENTES
+----------------------------------------------------------------------------------------------------
+-- TOP 10 / Películas más rentables
+
+CREATE VIEW top10_films AS
+SELECT
+    f.film_id,
+    f.title,
+    SUM(IF(p.amount > 0, p.amount, 0)) AS total_revenue,
+    COUNT(DISTINCT i.inventory_id) AS total_copies_rented
+FROM
+    payment p
+INNER JOIN rental r ON p.rental_id = r.rental_id
+INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+INNER JOIN film f ON i.film_id = f.film_id
+WHERE
+    r.return_date IS NOT NULL
+GROUP BY
+    f.film_id
+ORDER BY
+    total_revenue DESC
+LIMIT 10;
+
+-- Tendencia de alquiler e ingresos a lo largo del tiempo
+
+SELECT
+    YEAR(payment_date) AS year_rent,
+    MONTH(payment_date) AS month_rent,
+    COUNT(*) AS total_rent,
+    SUM(amount) AS total_revenue
+FROM
+    payment
+GROUP BY
+	year_rent, month_rent
+ORDER BY
+    total_revenue DESC
+
+-- TOP 10 / Mejores clientes
+
+SELECT
+	CONCAT(c.first_name,' ', c.last_name) AS Customers_Name,
+    COUNT(*) AS Total_Rentals,
+    SUM(p.amount) AS Total_Revenue
+FROM
+    customer c
+INNER JOIN rental r ON c.customer_id = r.customer_id
+INNER JOIN payment p ON r.rental_id = p.rental_id
+GROUP BY
+    c.customer_id
+ORDER BY
+    total_rentals DESC
+LIMIT 10;
+
+----------------------------------------------------------------------------------------------------
+-- ANÁLISIS DE INVENTARIO
 ----------------------------------------------------------------------------------------------------
 
+-- Películas de menor rotación
 
+SELECT
+    f.film_id,
+    f.title,
+    COUNT(*) AS total_copies_rented
+FROM
+    rental r
+INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+INNER JOIN film f ON i.film_id = f.film_id
+GROUP BY
+    f.film_id
+HAVING
+	total_copies_rented < (0.2 * (SELECT MAX(total_copies) 
+								  FROM (SELECT COUNT(*) AS total_copies
+										FROM rental r
+                                        INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+                                        GROUP BY i.film_id) AS subquery))
+ORDER BY
+	total_copies_rented
 
-----------------------------------------------------------------------------------------------------
--- 
-----------------------------------------------------------------------------------------------------
+-- Películas con menor Stock (Excluyendo las de menor rotación)
 
+SELECT 
+    f.film_id,
+    f.title AS title_film,
+    COUNT(i.inventory_id) AS copies_stock
+FROM
+    film f
+INNER JOIN inventory i ON f.film_id = i.film_id
+WHERE
+	f.title NOT IN (SELECT title FROM lower_rotation_films)
+GROUP BY 
+	f.film_id
+HAVING 
+	copies_stock < 3
+ORDER BY 
+	copies_stock ASC
 
 ~~~
