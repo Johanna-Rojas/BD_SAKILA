@@ -151,3 +151,10 @@ ORDER BY
 	copies_stock ASC
 
 ~~~
+
+## :computer: Contribuciones
+
+Este proyecto genera un espacio para aprender y crecer. Siéntete libre de explorar el código, hacer preguntas y proponer mejoras. 
+Tus comentarios son muy valiosos. :dizzy:
+
+***¡Gracias por tu interés en el proyecto!***
