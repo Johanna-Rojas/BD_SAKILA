@@ -50,7 +50,7 @@ El análisis de la base de datos se dividio en 2 secciones:
 
 ## :bookmark_tabs: Consultas en MySQL
 
-A continuación se presentan algunas de las consultas realizadas, si deseas visualizar el ***Script completo***, ir al siguiente enlace: [Queries_Sakila.sql]() o [Queries](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/QUERIES)
+A continuación se presentan algunas de las consultas realizadas, si deseas visualizar el ***Script completo***, ir al siguiente enlace: [Queries Sakila.sql](https://github.com/Johanna-Rojas/BD_SAKILA/blob/main/QUERIES_SAKILA.sql)
 
 ~~~
 ----------------------------------------------------------------------------------------------------
